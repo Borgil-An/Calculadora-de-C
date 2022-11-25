@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main(void){
+
+float N,N2;
+int c,op,cont;
+
+do{
+    printf ("Digite o primeiro número\n");
+            scanf ("%f",&N);
+    printf ("Digite o segundo número\n");
+            scanf ("%f",&N2);
+    printf ("Quer realizar qual operação?\n1)Soma\n");
+    printf ("2)Subtração\n");
+    printf ("3)Multiplicação\n");
+    printf ("4)Divisão\n");
+    printf ("5)Somátorio\n");
+    printf ("6)Sair da calculadora\n");
+        scanf ("%d",&op);
+    if(op==6){
+        cont=2;
+    }
+    else{
+    switch (op)
+    {
+        case 1:
+            printf ("\nA soma de seus números é %f\n",N+N2);
+            break;
+        case 2:
+            printf ("\nA subtração de seus números é %f\n",N-N2);
+            break;
+        case 3:
+            printf ("\nA multiplicação de seus números é %f\n",N*N2);
+            break;
+        case 4:
+            printf ("\nA divisão de seus números é %f\n",N/N2);
+            break;
+        case 5:
+            for (c=1;c<=N;c++){
+                printf ("\n%d\n",c);
+            }
+            break;
+        
+        default:
+            printf ("\nOperação invalida\n");
+    }
+    printf ("Deseja continuar?\n1)Sim\n2)Não\n");
+        scanf ("%d",&cont);
+        while  (cont<1||cont>2)
+        {
+           printf ("Deseja continuar?\n1)Sim\n2)Não\n");
+        scanf ("%d",&cont); 
+        }
+        
+    }
+}while (cont!=2);
+return(0);
+
+}
